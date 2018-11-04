@@ -1,0 +1,1175 @@
+/* 總控制 */
+@font-face {
+    font-family: 'Open Sans'; 
+    src: url('fonts/open_sans.woff') format("woff"),
+         url('fonts/open_sans.ttf') format("truetype"),      
+  }
+*{
+    /* outline: 1px solid blue; */
+    font-family: Arial , 'Open Sans';
+    color: #484848;
+    vertical-align: middle;
+    font-size: 16px;
+}
+.fix{
+    max-width: 1200px;
+    width: 1200px;
+    margin: auto;
+}
+.fz_30{
+    font-size: 30px;
+}
+/* headerfz20:#06B0AE;
+   s2和s3的fz20: #fff;*/
+.fz_20{
+    font-size: 20px;  
+    color: #2E2E2E; 
+}
+/* 基本上給button用 */
+.fz_16{
+    font-size: 16px;
+}
+.fz16_w300{
+    font-size: 16px;
+    font-weight: 300;
+}
+/* line-height */
+.lh_16{
+    line-height: 1.6;
+}
+.lh_30{
+    line-height: 3;
+}
+/* color */
+.c_ffffff{
+    color: #ffffff;
+}
+.bold{
+ font-weight: bold;
+}
+h1{
+    font-size: 55px;
+    color: #06B1AF;
+    letter-spacing: 2px;
+}
+h2{
+    font-size: 30px;
+    /* color: #003B9A; */  /*造成所有h2困擾的藍色*/
+    text-align: center;
+    letter-spacing: 5px;    
+}
+a{
+    text-decoration: none;
+    font-size: 16px;
+}
+.border_r{
+    border-radius: 4px 15px 4px 15px;
+}
+i{
+    font-size: 14px;
+    vertical-align: middle;
+}
+.btn{
+    display: inline-block;
+    width: 74px;
+    font-size: 16px;
+    font-weight: blod;
+    text-align: center;
+    line-height: 1.6;
+    padding: 12px 36px;
+    letter-spacing: 2px;
+    box-shadow: 1px 1px 3px rgba(0,0,0,.35);
+}
+.po_ab{
+    position: absolute;
+}
+img{
+    vertical-align: middle;
+}
+.positon_r{
+    position: relative;
+}
+/* 開始header */
+header{
+    background-image: url('img/nav_bg.svg');
+    background-repeat: no-repeat;
+    /* background-size: 560px 260px; */
+    background-position: right top;
+    padding-bottom: 234px;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 25px;
+    font-size: 0;
+}
+nav img{
+    width: 120px;
+    padding-bottom: 20px;
+}
+nav ul{
+    display: inline-block;
+    padding: 13px 0 0 7px;
+}
+nav li{
+    float: left;
+}
+nav li a{
+    display: inline-block;
+    padding: 0 0 0 20px;
+    color: #484848;
+    line-height: 32px;
+}
+.nav_icon>li>a{
+    padding-left: 15px;
+}
+.material-icons{
+    color: #484848;
+}
+
+
+
+/* header_banner */
+/* 請再確認nav_vertical怎麼配合程式串 */
+.nav_vertical{
+    position: fixed;
+}
+.banner{
+    /* display: flex;
+    justify-content: space-around; */
+    padding-top: 100px;
+    width: 1200px;
+}
+.side_circle{
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 59, 154, 0.4); 
+    position: relative;
+}
+.fill_circle{
+    background-color: rgba(0, 59, 154, 0.4); 
+}
+/* lastcircle沒有:after線 所以分開寫 */
+/* 僅有圓圈   暴力解QQ */
+.side_circle_only{
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 59, 154, 0.4); 
+    position: relative;
+}
+/* sideline */
+.side_circle::after{
+    content: '';
+    display: block;
+    width: 2px;
+    height: 49px;
+    background-color: rgba(0, 59, 154, 0.4);
+    position: absolute;
+    top: 22px;
+    left: 4px;
+}
+.nav_side ul>li{
+    margin: 0 0 73px 0;
+}
+/* h1+.fz_20是指h1底下的p */
+h1+.fz_20{
+    color: #06B1AF;
+    font-weight: 400; /*待確認*/
+    padding-bottom: 10px;
+    line-height: 1.8;
+}
+.banner_txt{
+    padding: 23px 0px 0 0;
+    float: left;
+    margin-left: 9%;
+    margin-right: 6%;  
+    width: 360px;
+}
+.banner_sub_content{
+    line-height: 1.7;
+    letter-spacing: 1px;
+    color: #7F7F7F;
+    padding: 5px 0 30px 0;
+}
+.banner_txt a{
+    background-color: #224BDD;
+    color: #ffffff;
+    margin-right: 15px;    
+}
+.banner_txt a:last-child{
+    background-color: #fff;
+    color:  #224BDD;
+    border: 2px solid #224BDD;
+    font-weight: bold;
+}
+.banner_pic{
+    float: left;
+}
+.banner_pic+img{
+    vertical-align: middle;
+}
+.pic_turn{
+    text-align: center;
+    padding-top: 10px;
+    font-size: 0;
+}
+.pic_turn li{
+    display: inline-block;
+}
+.pic_turn li::before{
+    content: '';
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 2px solid rgba(0, 59, 154, 0.4);
+    display: inline-block;
+    margin: 0 30px 0;
+}
+/* 問題～～～要選第一個圓填bgcolor */
+/* .ha:last-child:before{
+    background-color: rgba(0, 59, 154, 0.4);
+} */
+
+.banner_mail{
+    display: inline-block;
+    font-size: 16px;
+    color: rgba(0, 59, 154, 0.4);
+    writing-mode: vertical-rl;
+    -ms-writing-mode: tb-rl;
+    float: left;
+    display: inline-block; 
+    margin-left: 2%;
+    margin-top: 8%;
+     
+}
+.clearfix{
+    clear: both;
+}
+/* 開始 s1 */
+
+.s1{
+    padding: 104px 0;
+}
+.s1 h2+div{
+    display: flex;
+    justify-content: center;
+    padding-top: 80px;
+}
+.s1_content{
+    padding: 0 17px;
+    position: relative;
+    z-index: 5;
+}
+.s1_content::after{
+    content: '';
+    display: block;
+    width: 270px;
+    height: 270px;
+    background-color: rgba(55, 213, 219, 0.3);
+    border-radius: 4px 15px 4px 15px;
+    position: absolute;
+    z-index: -1;
+    top: 20px;
+    left: 35px;
+
+}
+.s1_content>p{
+    text-align: center;
+    line-height: 70px;
+}
+.waterprint{
+    font-size: 90px;
+    color: rgba(116, 226, 226, 0.2);
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 5px;
+    padding: 50px 0 0 0;
+}
+/* 開始 s2 */
+
+.s2{
+    position: relative;
+    padding: 136px 0;
+}
+.s2_bg{
+    width: 100%;
+    position: absolute;
+    top: -180px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -999;
+    height: 1000px;
+}
+.s2 h2::before,.s2 h2::after{
+    content: '';
+    width: 12px;
+    height: 12px;
+    background-color: #003B9A;
+    display: inline-block;
+    border-radius: 3px 65px 3px 50px;
+}
+.s2 h2::before{
+    margin-right: 10px;
+}
+.s2 h2::after{
+    -webkit-transform: scaleY(180deg);
+    transform: rotateY(180deg);
+    margin-left: 3px;
+}
+.s2 p{
+    text-align: center;
+    padding: 30px 0;
+}
+/* 螢光筆效果做不出來 */
+.s2>.fix>h2+p{
+    position: relative;
+
+}
+.s2>.fix>h2+p::after{
+    content: '';
+    width: 704px;
+    height: 12px;
+    background-color: rgba(244,191,191, .5);
+    border-radius: 4px;
+    display: inline-block;
+    position: absolute;
+    bottom: 28px;
+}
+.s2_content{
+    display: flex;
+    justify-content: center;
+    padding: 0 0 30px 0;
+}
+.s2_content>div{
+    padding: 0 30px;
+    position: relative;
+}
+
+.s2_overlay_txt{
+    font-size: 20px;
+    color: #ffffff;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    margin-left: -44px;
+    letter-spacing: 2px;
+}
+/* 師資認證營是五個字 所以ml-55單獨寫 */
+.o_m_55{
+    margin-left: -55px;
+}
+.overlay_shadow{
+    position: absolute;
+    width: 270px;
+    height: 341px;
+    background-image: linear-gradient(to top,rgba(28,28,28,.3), rgba(0,0,0,0));
+    border-radius: 4px 15px 4px 15px;
+    top: 0; 
+}
+/* btn探索瑜伽 用父層置中*/
+.s2 div:last-child{
+    text-align: center;
+}
+.s2>.fix a:last-child{
+    background-color: #06B1AF;
+    color: #fff;
+    margin: auto;
+}
+
+
+
+/* s3 */
+.s3{
+    padding: 104px 0;
+}
+.s3 a{
+    background-color: #06B1AF;
+    color: #fff;
+    float: right;
+}
+.s3_content{
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+.s3_photo, .s3_txt{
+    padding: 0 30px;
+}
+.s3_photo>img{
+    width: 540px;
+}
+.s3_txt{
+    width: 410px;
+}
+.s3_txt>p{
+    line-height: 2;
+    padding: 15px 0 45px 0;
+}
+
+
+/* 開始s4 */
+.s4{
+    background-image: url('img/Footer.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 1139px;
+    padding-top: 104px;
+}
+.s4_content{
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+.s4_content>div{
+    padding: 0 30px;
+}
+.s4_content h3{
+    font-size: 20px;
+}
+.s4_teach_info{
+    position: relative;
+    vertical-align: middle;
+}
+.s4_teach_info>img{
+    border-radius: 4px;
+    vertical-align: middle;
+}
+.s4 img+div{
+    width: 240px;
+    height: 171px;
+    padding: 15px;
+    background-color: #ffffff;
+    position: absolute;
+    top: 230px;
+    border-radius: 0 0 4px 4px;
+}
+.s4_txt p:first-of-type{
+    color: #7F7F7F;
+    font-size: 12px;
+    line-height: 1.6;
+    padding: 3px 0;
+}
+.s4_txt p:last-child{
+    color: #484848;
+    line-height: 1.8;
+}
+.s4+.fix div:last-child{
+    text-align: center;
+}
+.s4 a{
+    background-color: #224BDD;
+    color: #fff;
+    width: 110px;
+    margin-top: 30px;
+}
+/* footer */
+footer{
+    width: 100%;
+    height: 200px;
+    background-color: #080809;
+}
+
+
+/*********** surf ***********/
+/* flow wave bg */
+.yoga_gradient_bg{
+    background: linear-gradient(to top, #E3FDF5 0%, rgb(255, 230, 243) 100%);
+    /* radial-gradient( rgba(3,198,198,.3), rgb(237, 250, 255)); */
+    background-size: 400% 400%;
+    
+    -webkit-animation: yoga_gradient_bg 12s ease infinite;
+    -moz-animation: yoga_gradient_bg 12s ease infinite;
+    animation: yoga_gradient_bg 12s ease infinite;
+}
+@-webkit-keyframes yoga_gradient_bg {
+    0%{background-position:58% 0%}
+    50%{background-position:43% 100%}
+    100%{background-position:58% 0%}
+}
+@-moz-keyframes yoga_gradient_bg {
+    0%{background-position:58% 0%}
+    50%{background-position:43% 100%}
+    100%{background-position:58% 0%}
+}
+@keyframes yoga_gradient_bg { 
+    0%{background-position:58% 0%}
+    50%{background-position:43% 100%}
+    100%{background-position:58% 0%}
+}
+.surf_gradient_bg{
+    background: radial-gradient( rgba(3,198,198,.3), rgb(237, 250, 255)); 
+    /* radial-gradient( rgba(3,198,198,.3), rgb(237, 250, 255)); */
+    background-size: 400% 400%;
+    
+    -webkit-animation: surf_gradient_bg 12s ease infinite;
+    -moz-animation: surf_gradient_bg 12s ease infinite;
+    animation: surf_gradient_bg 12s ease infinite;
+}
+@-webkit-keyframes surf_gradient_bg {
+    0%{background-position:58% 0%}
+    50%{background-position:43% 100%}
+    100%{background-position:58% 0%}
+}
+@-moz-keyframes surf_gradient_bg {
+    0%{background-position:58% 0%}
+    50%{background-position:43% 100%}
+    100%{background-position:58% 0%}
+}
+@keyframes surf_gradient_bg { 
+    0%{background-position:58% 0%}
+    50%{background-position:43% 100%}
+    100%{background-position:58% 0%}
+}
+
+
+/* yoga surf總控 */
+.ys_banner{
+    background-size: 100% ;
+    height: 340px;
+}
+.ys_banner_ctrl{
+    padding: 60px 0  0 123px;
+}
+.ys_banner_ctrl>h2{ 
+    font-size: 40px;
+    text-align: left;
+}
+.pb_215{
+    padding-bottom: 215px;
+}
+
+/* 字 */
+/* 特例用 fz17 */
+.surf_title{
+    font-size: 17px;
+    color: #ffffff;
+    font-weight: 300;
+    letter-spacing: 1px;
+    line-height: 1.6;
+}
+.product{
+    width: 1080px;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 80px;
+    margin: auto;
+}
+
+/* 瑜珈總控 */
+.yoga_hot>.ys_banner_ctrl>h2{
+    color: #484848; 
+}
+.yoga_hot>.ys_banner_ctrl>h2+p{
+    color: #484848; 
+    line-height: 3;
+}
+/* 熱門瑜伽 */
+.yoga_hot{
+    width: 100%;
+    margin: auto;
+    background-position: 50% 20%;
+    background-image: url("img/yoga_hot.jpg");
+}
+.yoga_rec{
+    width: 330px;
+    height: 312px;
+    background-color: #F4BFBF;
+    text-align: center;
+    margin: 15px 15px 0 15px;
+    position: relative;
+}
+.yoga_rec p{
+    color: white;
+    font-weight: bold;
+    line-height: 312px;
+}
+.yoga_rec span{
+    display: inline-block;
+    width: 120px;
+    height: 1px;
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+    position: absolute;
+    bottom: 130px;
+    right:105px;
+}
+.yoga_pink{
+    width: 330px;
+    height: 97px;
+    position: absolute;
+    bottom: 15px; 
+    background-color: #fff; 
+    border-radius: 0 0 4px 4px;  
+}
+.yoga_pink span{
+    color: #224BDD;
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+}
+.start_date{
+    top: 17px;
+    left: 27px;
+}
+.end_date{
+    bottom: 17px;
+    left: 27px;
+}
+.time_line{
+    width: 1px;
+    height: 12px;
+    display: inline-block;
+    border: 1px solid #224BDD;
+    background-color: #224BDD;
+    position: absolute;
+    top: 42px;
+    left: 52px;
+}
+.yoga_pink div:last-child>p{
+    color: #224BDD;
+    font-weight: bold;
+    position: absolute;
+    top: 34px;
+    left: 96px;
+    font-size: 22px;
+}
+.yoga_pink+span{
+    color: #224BDD;
+}
+/*  背景＿ 瑜伽體驗 */
+.ex{
+    background-image: url("img/yoga_new_bg.jpg");
+    background-position: top center;
+    background-position: 50% 60%;     
+}
+/*  背景＿ 師資認證 */
+.teach{
+    background-image: url("img/yoga_teach_bg.jpg");
+    background-position: top center;
+    background-position: 50% 60%;    
+}
+ /* 商品總控 */
+ .p_ctrl{
+    height: 312px;
+    border-radius: 4px;
+    padding: 15px;
+    position: relative;
+}
+.border_r_4{
+    border-radius: 4px;
+}
+.surf_overlay_shadow{
+    position: absolute;
+    bottom: 15px; 
+    height: 312px;
+    background-image: linear-gradient(360deg,rgba(0,0,0,.8) 25px,rgba(0,0,0,.18) , rgba(0,0,0,0));    
+}
+.p_ctrl_content{
+    position: absolute;
+    bottom: 60px;    
+}
+.icon_fav_ctrl{
+    position: absolute;
+    border-radius: 50%;
+    top: 35px;
+    right: 35px; 
+}
+.icon_fav{
+    width: 35px;
+    height: 35px;
+    background-color: rgba(0, 0, 0, .2);
+    border-radius: 50%;
+    line-height: 18px;
+    display: inline-block;
+    position: relative;
+}
+.fav_center{
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    color: #ffffff;
+}
+.icon_fav:hover{
+    background-color:rgba(255, 198, 198, .85);
+}
+/* 商品總控_評價 */
+.rate{
+    padding: 1px 0 0 10px;
+}
+.rate>ul>li{
+    float: left;
+    padding-right: 5px;
+    color: #96F4EA;
+}
+.rate>ul>li:last-child{
+    padding: 5px 5px 0 0 ;
+    color: #96F4EA;
+    font-size: 12px;
+}
+.rate>ul>li>img{
+    width: 12px;
+}
+.clearfix{
+    clear: both;
+}
+
+.p_shadow{
+    box-shadow: 0 3px 6px rgba(0,0,0,0.18);
+}
+/******** 商品尺寸是330的 ********/
+.p_330, .p_330_overlay_shadow{
+    width: 330px;
+}
+.p330_content{  
+    left: 105px;
+} 
+/******** 商品尺寸是510的 ********/
+.p_510, .p_510_overlay_shadow{
+    width: 510px;
+}
+.p510_content{  
+    left: 110px;
+}
+/* 給yoga的p_510專用 */
+.yoga_date>p{
+    color: #96F4EA;
+}
+/* p510_教練頭像 */
+.circle_coach{
+    position: absolute;
+    bottom: 50px;
+    left: 40px;
+    width: 56px;
+    height: 56px;
+    /* border: 2px solid #06B1AF; */
+    border-radius: 50%;
+    /* background-color: #06B1AF; */
+    display: inline-block;
+    box-shadow: 0 0 2px rgba(0,0,0,0.24);
+
+}
+.circle_coach img{
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    border: 3px solid #06B1AF;
+}
+
+
+/******** 商品尺寸是240的 ********/
+.p_240, .p240_overlay_shadow{
+    width: 240px;
+}
+.p240_content{
+    left: 80px;
+}
+/* p240定位_教練頭像 */
+.p240_overlay>.circle_coach{
+    position: absolute;
+    bottom: 50px;
+    left: 25px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: 0 0 2px rgba(0,0,0,0.24);
+
+}
+.p240_overlay>.circle_coach img{
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    border: 3px solid #06B1AF;
+}
+/* p_240 hover 樣式 */
+.surf_title_hover{
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    letter-spacing: 1px;
+    line-height: 1.6;
+    padding-bottom: 10px;
+}
+.p240_content_hover{
+    left: 98px;
+    top: 90px;
+}
+.p240_content_hover>p>span>i{
+    color: #ffffff;
+    font-size: 20px;
+    padding-right: 5px;
+    
+}
+.p240_content_hover>p:not(:first-child){
+    padding-bottom: 10px;
+}
+.p240_content_hover p{
+    position: relative;
+}
+.span_ctrl{
+    position: absolute;
+    top: 2px;
+}
+.surf_overlay_hover{
+    position: absolute;
+    bottom: 15px; 
+    height: 312px;
+    background-image: linear-gradient(360deg,rgba(0,0,0,.7) 75px,rgba(0,0,0,0));    
+}
+/* 本週熱門 */
+.surf_hot{
+    width: 168px;
+    height: 54px;
+    background-color:rgba(255, 198, 198, .85);
+    border-radius: 0 16px 16px 0;
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-shadow: 0 3px 6px rgba(0, 0, 0, .16);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
+    text-align: center;
+    line-height: 54px;
+    position: absolute;
+    top: 35px;   
+}
+
+/* 價格 （p510 p240共用） */
+.surf_price{
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    color: #06B1AF;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* 初階衝浪 */
+.nav_vertical{
+    position: fixed;
+    /* top: 652px; */
+}
+.new{
+    width: 100%;
+    margin: auto;
+    background-position: top center;
+    background-image: url("img/surf_new_banner.jpg");
+}
+/* 背景＿進階衝浪 */
+.pro{
+    background-position: 50% 60%; 
+    background-attachment: fixed;
+    background-image: url("img/surf_pro_banner.jpg");
+}
+/*  背景＿立槳衝浪 */
+.sup{
+    background-image: url("img/surf_sup_banner.jpg");
+    background-position: 50% 50%;
+}
+
+
+/*********** PRODUCT ***********/
+/* 總控 */
+.shadow{
+    box-shadow: 1px 1px 3px rgba(0,0,0,.35);
+}
+/* h3標題控制 */
+.product_title{
+    position: relative;
+    padding: 0 0 30px 15px;
+}
+.product_title::before{
+    content: '';
+    background-image: url('img/icon_surf.svg');
+    background-size: 20px 20px;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    position: absolute;
+    left: -5px;
+}
+.pd_tb_60{
+    padding: 60px 0;
+}
+.nav_line{
+    width: 100%;
+    height: 1px;
+    background-color: rgba(112, 112,112,.2);
+}
+.bg_color{
+    /* background-color: #f6f6f5; */
+}
+.sub_nav{
+    padding: 30px 0 20px 0;
+    font-size: 14px;
+    color: #7f7f7f;  
+}
+.sub_nav span:last-child{
+    color: #7f7f7f;
+}
+
+.product_pht ,.product_pht a{
+    font-size: 0;
+}
+
+.product_pht img{
+    text-align: center;
+    margin: 0 15px;
+    vertical-align: top;
+}
+.product_w840{
+    width: 840px;
+}
+.product_content{
+    padding-bottom: 60px;
+}
+.product_content>h2{
+    text-align: left;
+    line-height: 1.6;
+    color: #2E2E2E;
+    padding: 30px 0 15px 0;
+}
+.product_content>h2+div{
+    width: 870px;
+    height: 1px;
+    background-color: rgba(112, 112,112,.2);
+}
+.product_content p{
+    line-height: 1.7;
+    color: #484848;
+    letter-spacing: 1px;
+}
+/* .product_content div:last-child ul{
+    list-style: disc;
+    padding-left: 10xp;
+} */
+.product_highlight{
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    border: 2px solid #00DBDE;
+    text-align: center;
+    float: left;
+    margin: 20px 30px 20px 0;
+}
+.product_highlight>div{
+    padding-top: 25px;
+}
+.product_highlight>div>span:first-child{
+    font-size: 25px;
+    font-weight: 700;
+    color: #00DBDE;
+}
+.product_highlight>div>span:last-child{
+    font-size: 12px;
+    color: #00DBDE;
+    line-height: 2.5;
+}
+/* 價格表 */
+.product_price{
+    width: 300px;
+    height: 276px;
+    position: fixed;
+    right: 126px;
+    bottom: 20px;
+    border: 1px solid rgba(34, 75, 221, .5);
+    background-color: #fff;
+    box-shadow: 1px 1px 3px rgba(0,0,0,.35);
+    text-align: center;
+}
+.product_price a{
+    background-color: #224BDD;
+    color: #ffffff;
+    width: 110px;
+}
+.product_price p:first-child{
+    font-weight: bold;
+    padding: 46px 0 30px 0;
+}
+.product_price>a+p{
+    padding: 12px 0 24px 0;
+}
+.product_rate{
+    display: inline-block;
+}
+.product_rate>ul>li{
+    float: left;
+    padding-right: 5px;
+    color:  #224BDD;
+}
+.product_rate>ul>li:last-child{
+    padding: 5px 5px 0 0 ;
+    color:  #7f7f7f;
+    font-size: 12px;
+}
+.product_rate>ul>li>img{
+    width: 12px;
+}
+/* 方案選擇 */
+.product_choice{
+    background-color: #FDF3F3;
+
+}
+.product_choice_contaniner{
+    background-color: #fff;
+}
+input[type=number],input[type=date]{
+    width: 300px;
+    height: 40px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-position: 10px 5px; 
+    background-repeat: no-repeat;
+    background-size: 25px;
+    padding: 12px 20px 12px 40px;
+    color: #7F7F7F;
+}
+input[type=date]{
+    background-image: url('img/icon_date.svg');
+}
+input[type=number]{
+    background-image: url('img/icon_number.svg');    
+}
+.form_p{
+    font-size: 20px;
+    color: #06B1AF;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+form label{
+    color: #7F7F7F;
+    font-weight: bold;
+    padding: 15px 0 10px 0;
+    display: inline-block;
+}
+form label>span{
+    color: #7F7F7F;
+    font-weight: normal; 
+}
+.product_choice_contaniner{
+    font-size: 0;
+}
+.product_choice_contaniner>div{
+    display: inline-block;
+    width: 390px;
+    padding: 30px 0 25px 30px;
+    font-size: 16px;
+}
+.fee_detail{
+    margin-left: 30px;
+}
+.fee_detail ul{
+    list-style: disc;
+}
+.fee_detail ul li{
+    line-height: 1.6;
+}
+
+/* 詳細行程 */
+.product_intro{
+    height: 560px;
+}
+.item{
+    width: 250px;
+    height: 200px;
+    border: 1px solid #06B1AF; 
+    position: relative; 
+    margin-bottom: -50px;
+}
+.item>p{
+    color: #ffffff;
+    position: absolute;
+    top: 17px;
+    left: 95px;
+}
+.item::before{
+    content: '';
+    display: inline-block;
+    width: 250px;
+    height: 50px;
+    border-radius: 4px 4px 0 0;
+    background-color: #06B1AF;
+    color: #fff;
+    position: absolute;
+    top: -1px;
+    left: 0;
+    vertical-align: middle;
+}
+.item>div{
+    position: absolute;
+    top: 60px;
+    left: 30px;
+}
+ol>li{
+    line-height: 1.6;
+}
+
+.product_intro_ctrl ul{
+    margin-left: 420px;
+    position: absolute;
+    top: 25px;
+}
+.product_intro_ctrl ul>li{
+    margin-bottom: 100px;
+}
+.item:nth-child(2n+1){
+    margin-left : 110px ;
+}
+.item:nth-child(2n+2){
+    margin-left: 480px ;
+}
+.side2_circle{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px;
+    background-color: #06B1AF;
+    position: absolute;
+}
+.side2_circle_2{
+    top: 150px;
+}
+.side2_circle_3{
+    top: 300px;
+}
+/* sideline */
+.sideline::after{
+    content: '';
+    display: block;
+    width: 2px;
+    height: 304px;
+    background-color: #06B1AF;
+    position: absolute;
+    top: 2px;
+    left: 4px;
+}
+/* 地圖 */
+.addr{
+    padding-bottom: 10px;
+}
+.product_map {
+    width: 840px;
+    height: 300px;
+    background-image: url('img/map_product.png');
+    background-size: 840px;
+}
+/* 注意事項 */
+.bg_gray{
+    background-color: #f1f3f5;
+}
+.product_notice{
+    margin-left: 30px;
+}
+.product_notice ul{
+    list-style: disc;
+}
+.product_notice ul >li{
+    line-height: 1.6;
+}

@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flow Zone</title>
+    <link rel="stylesheet" href="css_reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">   
+</head>
+<body>
+    <!-- 導覽列開始 -->
+    <!-- <div class="gradient_bg"> -->
+    <div class="fix">
+        <nav>
+            <div>
+                <a href=".javascript">
+                    <img src="img/logo.png" alt="logo" >
+                </a>
+            </div>
+            <div>
+                <ul>
+                    <li><a href=".javascript">預約瑜伽</a></li>
+                    <li><a href=".javascript" class="bold">預約衝浪</a></li>
+                    <li><a href=".javascript">關於我們</a></li>
+                    <li><a href=".javascript">交通指引</a></li>
+                </ul>
+                <ul class="nav_icon">
+                    <li>
+                        <a href=".javascript">
+                            <i class="material-icons">favorite_border</i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href=".javascript">
+                            <i class="material-icons">shopping_cart</i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href=".javascript">
+                            登入／註冊
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>    
+    <div class="nav_line"></div>
+    <!-- 產品內文開始 -->
+    <div class="fix bg_color">
+        <div class="sub_nav">
+            <span>預約衝浪</span>
+            <span>
+                <i class="material-icons">keyboard_arrow_right</i>
+            </span>
+            <span>初階衝浪</span>
+            <span>
+                <i class="material-icons">keyboard_arrow_right</i>
+            </span>
+            <span>【都壢】海灘衝浪體驗 </span>
+        </div>
+        <!-- 照片 -->
+        <section class="product_pic">
+            <div class="product_pht">
+                <img src="img/product_img_1.png" alt="課程圖片" class="border_r_4">
+                <a href=".javascript">
+                    <img src="img/product_img_2.png" alt="教練照片" class="border_r_4 shadow">
+                </a>
+            </div>
+            <div class="product_coach"></div>
+            <!-- 價格表 -->
+            <div class="product_price border_r_4">
+                    <p class="fz_30">NT$ 2,000 ／人</p>
+                    <a href=".javascript" class="btn border_r">立即預訂</a>
+                    <p>最早可預訂日期：明日</p>
+                    <div class="product_rate">
+                        <ul>
+                            <li>5.0</li>
+                            <li><img src="img/icon_star2.svg" alt=""></li>
+                            <li><img src="img/icon_star2.svg" alt=""></li>
+                            <li><img src="img/icon_star2.svg" alt=""></li>
+                            <li><img src="img/icon_star2.svg" alt=""></li>
+                            <li><img src="img/icon_star2.svg" alt=""></li>
+                            <li>(206)</li>
+                        </ul>
+                        <div class="clearfix"></div>
+                    </div>
+            </div>
+        </section>
+        <!-- 課程說明 -->
+        <div class="product_w840">
+            <section class="product_content">
+                <h2>【都壢】海灘衝浪體驗</h2>
+                <!-- 此div為空隔線 -->
+                <div></div> 
+                <div>
+                    <div class="product_highlight">
+                        <div class="test">
+                            <span>3-4hrs</span>
+                            <span>課程時間</span>
+                        </div>
+                    </div>
+                    <div class="product_highlight">
+                        <div>
+                            <span>英／中</span>
+                            <span>語言</span>
+                        </div>
+                    </div>
+                    <div class="product_highlight">
+                        <div>
+                            <span>含接駁</span>
+                            <span>交通</span>
+                        </div>
+                    </div>
+                    <div class="product_highlight">
+                        <div>
+                            <span>可加購</span>
+                            <span>住宿</span>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <p class="fz16_w300">對於想參加多次課程的客人，我們也提供相關的折扣。對於初學者，我們鼓勵你至少參加連續3天的課程，甚至連續7天以上。我們之所以建議初學者參加連續課程是因為衝浪並非如想像般簡單，在學習的過程中必須花費一定的時間練習和適應大海，如果能花多一點時間並且不間斷的練習，你將可以更加體會衝浪的樂趣並且進步得更快；但若是純粹想享受海洋和體驗衝浪，單次課程也能夠滿足你的需求。</p>
+            </div>
+        </section>
+    </div>  <!--fix end-->
+        <!-- 開始 方案選擇 -->
+        <section class="product_choice pd_tb_60">
+            <div class="fix">
+                <h3 class="fz_20 product_title">方案選擇</h3>
+                <div class="product_w840 product_choice_contaniner">
+                    <div>
+                        <form action="">
+                            <p class="form_p">日期／人數</p>
+                            <label for="date">選擇日期</label>
+                            <br>
+                            <input type="date" name="date">
+                            <br>
+                            <label for="number">選擇人數
+                                <span>(至多8人)</span>
+                            </label>
+                            <br>
+                            <input type="number" min="0" max="8" placeholder="請選擇">
+                        </form>                       
+                    </div>
+                    <div>        
+                        <form action="">
+                            <p class="form_p">加購住宿</p>
+                            <label for="date">選擇日期</label>
+                            <br>
+                            <input type="date" name="date">
+                            <br>
+                            <label for="number">選擇人數
+                                <span>(至多8人)</span>
+                            </label>
+                            <br>
+                            <input type="number" min="0" max="8" placeholder="請選擇">
+                        </form>
+                    </div>
+                    <div>
+                        <p class="form_p">費用包含</p>
+                        <div class="fee_detail">
+                            <ul>
+                                <li>衝浪板</li>
+                                <li>防磨衣</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>   
+        </section> <!-- 結束 方案選擇 -->
+        <!-- 開始 詳細行程 -->
+        <div class="">
+            <section class="fix pd_tb_60 product_intro">
+                <h3 class="fz_20 product_title">行程介紹</h3>
+                    <div class="product_intro_ctrl positon_r">
+                        <ul>
+                            <li class="side2_circle sideline"></li>
+                            <li class="side2_circle side2_circle_2 "></li>
+                            <li class="side2_circle side2_circle_3 "></li>
+                        </ul>    
+                        <div class="product_w840">
+                            <div class="item border_r_4">
+                                <p>第一部分</p>
+                                <div>
+                                    <ol>
+                                        <li>基本安全常識</li>
+                                        <li>使用衝浪板</li>
+                                        <li>划水</li>
+                                        <li>潛越</li>
+                                        <li>在白浪花中找浪</li>
+                                    </ol>
+                                </div>
+                            </div>
+                            <div class="item border_r_4">
+                                <p>第二部分</p>
+                                <div>
+                                    <ol>
+                                        <li>站立</li>
+                                        <li>學習從外浪中回來</li>
+                                        <li>坐板</li>
+                                        <li>辨別海浪</li>
+                                        <li>學習適應浪的表面</li>
+                                    </ol>
+                                </div>
+                            </div>
+                            <div class="item border_r_4">
+                                <p>第三部分</p>
+                                <div>
+                                    <ol>
+                                        <li>切回轉向</li>
+                                        <li>回到浪頭</li>
+                                        <li>停留在浪中</li>
+                                        <li>適應正、反向波浪</li>
+                                        <li>在波管中衝浪</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>           
+                    </div>  <!--product_intro_ctrl end-->                     
+            </section><!-- 結束 詳細行程 -->
+        </div>
+        <!-- 開始 地圖 -->
+        <section class=" pd_tb_60 fix">
+                <h3 class="fz_20 product_title">行程地點</h3>
+                <ul>
+                    <li class="lh_16 addr">地址：台東縣東河鄉東河村395號</li>
+                </ul>
+                <div class="product_map"></div>
+        </section>    <!--結束 地圖-->
+        <!-- 注意事項 -->
+        <div class="bg_gray">
+            <section class=" pd_tb_60 fix">
+                    <h3 class="fz_20 product_title">注意事項</h3>
+                    <div class="product_notice">
+                        <ul>
+                            <li>請學員自備：毛巾、泳衣、泳鏡</li>
+                            <li>年齡要求：未滿十八歲需法定代理人同意</li>
+                            <li>僅參加課程者享有加購住宿的服務</li>
+                            <li>如當天天氣或浪況不佳，將可重新安排課程時間，或選擇退款</li>
+                        </ul>
+                    </div>
+            </section>
+        </div> <!--結束 注意事項-->
+        <section>
+            <div class="product">
+                <!--  順序一product 240 -->
+                <a href=".javacript">
+                    <div class="p_240 p_ctrl">
+                        <img src="img/surf_img_4.png" alt="【都壢】衝浪體驗" class="border_r_4 p_shadow">
+                        <div class="p240_overlay">
+                            <div class="icon_fav_ctrl">
+                                <span class="icon_fav">
+                                        <i class="material-icons fav_center">favorite_border</i>
+                                </span>
+                            </div>
+                            <div class="p240_overlay_shadow surf_overlay_shadow border_r_4"></div>
+                            <!-- 教練頭像 -->
+                            <div class="circle_coach">
+                                <a href=".javascript">
+                                    <img src="img/surf_img_teach1.png" alt="教練照片">
+                                </a> 
+                            </div>
+                            <!-- 商品簡介 -->
+                            <div class="p240_content p_ctrl_content">
+                                <p class="surf_title">【金樽】進階衝浪</p>
+                                <div class="rate">
+                                    <ul>
+                                        <li>5.0</li>
+                                        <li><img src="img/icon_star.svg" alt=""></li>
+                                        <li><img src="img/icon_star.svg" alt=""></li>
+                                        <li><img src="img/icon_star.svg" alt=""></li>
+                                        <li><img src="img/icon_star.svg" alt=""></li>
+                                        <li><img src="img/icon_star.svg" alt=""></li>
+                                        <li>(98)</li>
+                                    </ul>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                            <span class="surf_price">NTD $ 2,500 </span>
+                        </div>
+                    </div>
+                </a>
+                <!--  順序二product 240 -->
+                <a href=".javacript">
+                    <div class="p_240 p_ctrl">
+                        <img src="img/surf_img_5.png" alt="【都壢】衝浪體驗" class="border_r_4 p_shadow">
+                        <div class="p240_overlay">
+                            <div class="icon_fav_ctrl">
+                                <span class="icon_fav">
+                                        <i class="material-icons fav_center">favorite_border</i>
+                                </span>
+                            </div>
+                            <div class="p240_overlay_shadow surf_overlay_shadow border_r_4"></div>
+                            <!-- 教練頭像 -->
+                            <div class="circle_coach">
+                                <a href=".javascript">
+                                    <img src="img/surf_img_teach1.png" alt="教練照片">
+                                </a> 
+                            </div>
+                            <!-- 商品簡介 -->
+                            <div class="p240_content p_ctrl_content">
+                                <p class="surf_title">【都壢】衝浪體驗</p>
+                                <div class="rate">
+                                    <ul>
+                                        <li>5.0</li>
+                                        <li><img src="img/icon_star.svg" alt=""></li>
+                                        <li><img src="img/icon_star.svg" alt=""></li>
+                                        <li><img src="img/icon_star.svg" alt=""></li>
+                                        <li><img src="img/icon_star.svg" alt=""></li>
+                                        <li><img src="img/icon_star.svg" alt=""></li>
+                                        <li>(125)</li>
+                                    </ul>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                            <span class="surf_price">NTD $ 2,500 </span>
+                        </div>
+                    </div>
+                </a>
+                    <!--  順序三product 240 -->
+                <a href=".javacript">
+                    <div class="p_240 p_ctrl">
+                        <img src="img/surf_img_4.png" alt="【都壢】衝浪體驗" class="border_r_4 p_shadow">
+                        <div class="p240_overlay">
+                            <div class="icon_fav_ctrl">
+                                <span class="icon_fav">
+                                        <i class="material-icons fav_center">favorite_border</i>
+                                </span>
+                            </div>
+                            <div class="p240_overlay_shadow surf_overlay_shadow border_r_4"></div>
+                            <!-- 教練頭像 -->
+                            <div class="circle_coach">
+                                <a href=".javascript">
+                                    <img src="img/surf_img_teach1.png" alt="教練照片">
+                                </a> 
+                            </div>
+                            <!-- 商品簡介 -->
+                            <div class="p240_content p_ctrl_content">
+                                <p class="surf_title"> 衝浪轉向體驗</p>
+                                <div class="rate">
+                                    <ul>
+                                        <li>5.0</li>
+                                        <li><img src="img/icon_star.svg" alt=""></li>
+                                        <li><img src="img/icon_star.svg" alt=""></li>
+                                        <li><img src="img/icon_star.svg" alt=""></li>
+                                        <li><img src="img/icon_star.svg" alt=""></li>
+                                        <li><img src="img/icon_star.svg" alt=""></li>
+                                        <li>(98)</li>
+                                    </ul>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                            <span class="surf_price">NTD $ 2,500 </span>
+                        </div>
+                    </div>
+                </a>
+ 
+            </div>
+        </section>
+    <!-- </div> -->
+</body>
+</html>
